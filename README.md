@@ -5,7 +5,6 @@ conda env create -f environment.yml
 conda activate py310
 
 2. Load data from HuggingFace
-# Make a huggingface account and get a token
 huggingface-cli login
 python load_data.py
 
