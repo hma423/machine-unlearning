@@ -3,9 +3,7 @@
 This repository provides the original implementation of *Machine Unlearning Six-Way Evaluation for Language Models* by Weijia Shi*, Jaechan Lee*, Yangsibo Huang*, Sadhika Malladi, Jieyu Zhao, Ari Holtzman, Daogao Liu, Luke Zettlemoyer, Noah A. Smith, and Chiyuan Zhang. (*Equal contribution)
 
 
-[Paper](https://www.arxiv.org/abs/2407.06460) | [Website](https://muse-bench.github.io/) |  [Leaderboard](https://huggingface.co/spaces/muse-bench/MUSE-Leaderboard) | [MUSE-News Benchmark](https://huggingface.co/datasets/muse-bench/MUSE-News) | [MUSE-News Benchmark](https://huggingface.co/datasets/muse-bench/MUSE-News) |  [MUSE-Books Benchmark](https://huggingface.co/datasets/muse-bench/MUSE-Books) 
-
-🎉 Happy to share that MUSE is now incorporated into [open-ulearning](https://github.com/locuslab/open-unlearning). Please use it for evaluation.
+[Website](https://muse-bench.github.io/) |  [Leaderboard](https://huggingface.co/spaces/muse-bench/MUSE-Leaderboard) | [MUSE-News Benchmark](https://huggingface.co/datasets/muse-bench/MUSE-News) | [MUSE-News Benchmark](https://huggingface.co/datasets/muse-bench/MUSE-News) |  [MUSE-Books Benchmark](https://huggingface.co/datasets/muse-bench/MUSE-Books) 
 
 
 ## Overview
@@ -18,14 +16,13 @@ This repository provides the original implementation of *Machine Unlearning Six-
 :star: If you find our implementation and paper helpful, please consider citing our work :star: :
 
 ```bibtex
-@article{shi2024muse,
-        title={MUSE: Machine Unlearning Six-Way Evaluation for Language Models},
-        author={Weijia Shi and Jaechan Lee and Yangsibo Huang and Sadhika Malladi and Jieyu Zhao and Ari Holtzman and Daogao Liu and Luke Zettlemoyer and Noah A. Smith and Chiyuan Zhang},
-        year={2024},
-        eprint={2407.06460},
-        archivePrefix={arXiv},
-        primaryClass={cs.CL},
-        url={https://arxiv.org/abs/2407.06460},
+@misc{shi2023detecting,
+    title={Detecting Pretraining Data from Large Language Models},
+    author={Weijia Shi and Anirudh Ajith and Mengzhou Xia and Yangsibo Huang and Daogao Liu and Terra Blevins and Danqi Chen and Luke Zettlemoyer},
+    year={2023},
+    eprint={2310.16789},
+    archivePrefix={arXiv},
+    primaryClass={cs.CL}
 }
 ```
 
@@ -33,7 +30,7 @@ This repository provides the original implementation of *Machine Unlearning Six-
 - [ MUSE: Machine Unlearning Six-Way Evaluation for Language Models](#-muse-machine-unlearning-six-way-evaluation-for-language-models)
   - [Overview](#overview)
   - [Content](#content)
-  - [🛠️ Installa and \`Newstion](#️-installa-and-newstion)
+  - [🛠️ Installation](#️-installation)
     - [Conda Environment](#conda-environment)
   - [📘 Data \& Target Models](#-data--target-models)
   - [🚀 Run unlearning baselines](#-run-unlearning-baselines)
@@ -43,14 +40,14 @@ This repository provides the original implementation of *Machine Unlearning Six-
     - [`eval_model` Function](#eval_model-function)
   - [➕ Add to the Leaderboard](#-add-to-the-leaderboard)
 
-## 🛠️ Installa and `Newstion
+## 🛠️ Installation
 
 ### Conda Environment
 
 To create a conda environment for Python 3.10, run:
 ```bash
 conda env create -f environment.yml
-conda activate py310
+conda activate muse_bench
 ```
 
 ## 📘 Data & Target Models

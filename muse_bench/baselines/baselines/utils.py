@@ -24,7 +24,7 @@ def read_text(file_path: str) -> str:
     if Path(file_path).suffix != '.txt':
         raise ValueError
 
-    with open(file_path, 'r') as f:
+    with open(file_path, 'r', encoding='utf-8') as f:
         text: str = f.read()
     return text
 

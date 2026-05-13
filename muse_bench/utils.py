@@ -23,12 +23,14 @@ def write_json(obj: Dict | List, fpath: str):
 
 def write_text(obj: str, fpath: str):
     os.makedirs(os.path.dirname(fpath), exist_ok=True)
-    with open(fpath, 'w') as f:
+    with open(fpath, 'w', encoding='utf-8') as f:
         return f.write(obj)
 
 
 def write_csv(obj, fpath: str):
-    os.makedirs(os.path.dirname(fpath), exist_ok=True)
+    dirpath = os.path.dirname(fpath)
+    if dirpath:
+        os.makedirs(dirpath, exist_ok=True)
     pd.DataFrame(obj).to_csv(fpath, index=False)
 
 
@@ -38,4 +40,3 @@ def load_model(model_dir: str, **kwargs):
 
 def load_tokenizer(tokenizer_dir: str, **kwargs):
     return AutoTokenizer.from_pretrained(tokenizer_dir, **kwargs)
-    

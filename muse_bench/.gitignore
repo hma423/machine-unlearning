@@ -6,3 +6,5 @@ internal
 **/.DS_Store
 **/.vscode
 data
+ckpt
+muse_finetuned
